@@ -50,7 +50,7 @@ resource "aws_subnet" "dev_proj_1_private_subnets" {
 }
 
 # Setup Internet Gateway
-/*resource "aws_internet_gateway" "dev_proj_1_public_internet_gateway" {
+resource "aws_internet_gateway" "dev_proj_1_public_internet_gateway" {
   vpc_id = aws_vpc.dev_proj_1_vpc_us_east_1.id
   tags = {
     Name = "dev-proj-1-igw"
@@ -90,4 +90,4 @@ resource "aws_route_table_association" "dev_proj_1_private_rt_subnet_association
   count          = length(aws_subnet.dev_proj_1_private_subnets)
   subnet_id      = aws_subnet.dev_proj_1_private_subnets[count.index].id
   route_table_id = aws_route_table.dev_proj_1_private_subnets.id
-}*/
+}
