@@ -1,4 +1,4 @@
-bucket_name = "dev-proj-1-jenkins-remote-state-bucket-123456"
+bucket_name = "dev-proj-1-jenkins-remote-state-bucket-222456"
 
 vpc_cidr             = "11.0.0.0/16"
 vpc_name             = "dev-proj-jenkins-us-east-1-vpc-1"
