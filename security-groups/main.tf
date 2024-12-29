@@ -71,7 +71,7 @@ resource "aws_security_group" "ec2_jenkins_port_8080" {
   }
 
   tags = {
-    Name = "Security Groups to allow SSH(22) and HTTP(80)"
+    Name = "Security Groups to allow 8080 port to access jenkins"
   }
 }
 
