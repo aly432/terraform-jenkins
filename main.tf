@@ -14,7 +14,7 @@ module "security_group" {
   ec2_jenkins_sg_name = "Allow port 8080 for jenkins"
 }
 
-/*module "jenkins" {
+module "jenkins" {
   source                    = "./jenkins"
   ami_id                    = var.ec2_ami_id
   instance_type             = "t2.medium"
@@ -26,7 +26,7 @@ module "security_group" {
   user_data_install_jenkins = templatefile("./jenkins-runner-script/jenkins-installer.sh", {})
 }
 
-module "lb_target_group" {
+/*module "lb_target_group" {
   source                   = "./load-balancer-target-group"
   lb_target_group_name     = "jenkins-lb-target-group"
   lb_target_group_port     = 8080
